@@ -1,2 +1,14 @@
 <app-navbar></app-navbar>
-<p>articulo-title works!</p>
+<br>
+<br>
+<div class="card">
+    <div class="flex justify-content-center align-content-center flex-wrap card-container">
+        <p-card [header]=" articulo.title " [subheader]="'AUTHOR: ' + articulo.author" [style]="{width: '500px'}" styleClass="shadow-2">
+            <ng-template pTemplate="header">
+                <img alt="Card" [src]="articulo.urlToImage">
+            </ng-template>
+            <p>{{articulo.content}}</p>
+
+        </p-card>
+    </div>
+</div>

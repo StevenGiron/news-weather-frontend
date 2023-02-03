@@ -1,19 +1,17 @@
 <app-navbar></app-navbar>
 <br>
 <div class="card">
-    <div class="flex flex-wrap grid">
-        <div class="col-3">
-            <p-card header="Cali-Colombia " subheader="weather" [style]="{width: '360px', 'margin-bottom': '2em'} " styleClass="shadow-2 ">
-                <ng-template pTemplate="header ">
-                </ng-template>
-                <ul>
-                    <li>Temperature {{weather.main.temp}}&deg;C</li>
-                    <li>Min. Temperature {{weather.main.temp_min}}&deg;C</li>
-                    <li>Max Temperature {{weather.main.temp_max}}&deg;C</li>
-                    <li>Humidity {{weather.main.humidity}}</li>
-                </ul>
-
-            </p-card>
-        </div>
+    <div class="flex justify-content-center align-content-center">
+        <p-card header="Cali-Colombia" [subheader]="description.description" [style]="{width: '700px'}" styleClass="shadow-2">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../../../../assets/images/cali.jpg">
+            </ng-template>
+            <ul>
+                <li>Temperature: {{weather.main.temp}}&deg;C</li>
+                <li>Min. Temperature: {{weather.main.temp_min}}&deg;C</li>
+                <li>Max Temperature: {{weather.main.temp_max}}&deg;C</li>
+                <li>Humidity: {{weather.main.humidity}}</li>
+            </ul>
+        </p-card>
     </div>
 </div>

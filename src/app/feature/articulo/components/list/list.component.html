@@ -1,10 +1,11 @@
 <app-navbar></app-navbar>
+
 <div class="card">
     <div class="flex flex-wrap grid">
         <div *ngFor=" let articulo of articulos " class="col-3">
-            <p-card [header]=" articulo.title " [subheader]="'AUTHOR: ' + articulo.author" [style]="{width: '360px', 'margin-bottom': '2em'} " styleClass="shadow-2 ">
-                <ng-template pTemplate="header ">
-                    <img alt="Card " [src]="articulo.urlToImage" [style]="{width: '300px'} ">
+            <p-card [header]=" articulo.title " [subheader]="'AUTHOR: ' + articulo.author" [style]="{width: '360px'}" styleClass="shadow-2">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="articulo.urlToImage">
                 </ng-template>
                 <p>{{articulo.description}}</p>
                 <ng-template pTemplate="footer">

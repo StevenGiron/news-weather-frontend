@@ -24,24 +24,25 @@ export class ArticuloTitleComponent implements OnInit {
   title!: string;
 
   constructor(private articuloService: ArticuloService,
-              private router: Router,
+              
               private activatedRoute: ActivatedRoute) { 
-               
-                
+                this.title = String(this.activatedRoute.snapshot.paramMap.get("title"));
+                if (this.title)this.getArticuloByTitle(this.title)      
               }
 
   ngOnInit(): void {
-    this.title = String(this.activatedRoute.snapshot.paramMap.get("title"));
-    if (this.title) this.getArticuloByTitle(this.title)
   }
 
   getArticuloByTitle(title:string){
     this.articuloService.getByTitle(title)
       .subscribe((articulos)=>{
         this.articulos = articulos
-      })
-      console.log(this.articulos);
-      
+        for (let index = 0; index < this.articulos.length; index++) {
+          const articulo = this.articulos[0];
+          this.articulo = articulo
+        }
+        
+      })      
   }
 
 }

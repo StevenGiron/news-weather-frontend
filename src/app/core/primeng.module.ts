@@ -8,7 +8,6 @@ import { PanelModule } from 'primeng-lts/panel';
 import { ToastModule } from 'primeng-lts/toast';
 import { MessageService } from 'primeng-lts/api';
 import {TabMenuModule} from 'primeng-lts/tabmenu';
-import {SplitterModule} from 'primeng-lts/splitter';
 
 
 
@@ -22,7 +21,6 @@ import {SplitterModule} from 'primeng-lts/splitter';
     PanelModule,
     ToastModule,
     TabMenuModule,
-    SplitterModule
   ],
   
   providers:[
