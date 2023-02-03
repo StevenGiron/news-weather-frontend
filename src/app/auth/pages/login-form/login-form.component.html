@@ -1,0 +1,27 @@
+<form [formGroup]="userForm">
+    <div class="flex flex-column-reverse card-container md:flex-row">
+        <p-fieldset>
+            <ng-template pTemplate="header">{{(isLogin)? 'Log In': 'Sign Up'}}</ng-template>
+            <div class="flex align-items-center justify-content-center mb-4">
+                <span class="p-float-label">
+            <input formControlName="username" type="text" pInputText>
+            <label for="float-input">Username</label>
+        </span>
+            </div>
+            <div class="flex align-items-center justify-content-center mb-4">
+                <span class="p-float-label">
+            <input formControlName="password" type="text" pInputText>
+            <label for="float-input">Password</label>
+        </span>
+            </div>
+            <div class="flex align-items-center justify-content-center ">
+
+                <p-button *ngIf="isLogin" class="mr-4" label="Log In" (onClick)="logIn()"></p-button>
+                <button pButton *ngIf="isLogin" [routerLink]="[ '/auth/signup']" type="button" label="Sing Up" class="p-button-outlined"></button>
+                <p-button *ngIf="!isLogin" class="mr-4" label="Sign Up" (onClick)="signUp()"></p-button>
+                <button pButton *ngIf="!isLogin" [routerLink]="[ '/auth/login']" type="button" label="Back" class="p-button-outlined"></button>
+
+            </div>
+        </p-fieldset>
+    </div>
+</form>
