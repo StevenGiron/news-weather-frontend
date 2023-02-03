@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './components/list/list.component';
 import { ArticuloComponent } from './components/articulo/articulo.component';
 import { ArticuloRoutingModule } from './articulo-routing.module';
-import { SharedModule } from 'primeng-lts/api';
+// import { SharedModule } from 'primeng-lts/api';
 import { ArticuloTitleComponent } from './components/articulo-title/articulo-title.component';
+import { CoreModule } from '../../core/core.module';
 
 
 
@@ -19,7 +20,9 @@ import { ArticuloTitleComponent } from './components/articulo-title/articulo-tit
   imports: [
     CommonModule,
     ArticuloRoutingModule,
-    SharedModule
+    // SharedModule,
+    CoreModule,
+    
   ]
 })
 export class ArticuloModule { }

@@ -1,18 +1,21 @@
 export class Articulo {
     author     : string;
     title      : string;
-    descripcion: string;
+    description: string;
+    content    : string;
     urlToImage : string;
 
     constructor(
         author     : string,
         title      : string,
-        descripcion: string,
-        urlToImage : string){
+        description: string,
+        urlToImage : string,
+        content    : string){
 
             this.author      = author;
             this.title       = title;
-            this.descripcion = descripcion;
+            this.description = description;
+            this.content     = content
             this.urlToImage  = urlToImage
     }
 }
